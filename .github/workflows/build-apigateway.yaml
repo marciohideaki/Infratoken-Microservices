@@ -6,11 +6,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      working-directory: ./apigateway
-    defaults:
-      run:
-        working-directory: ${{ env.working-directory }}
+    #env:
+    #  working-directory: ./apigateway
+    #defaults:
+    #  run:
+    #    working-directory: ${{ env.working-directory }}
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js
