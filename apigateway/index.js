@@ -53,4 +53,4 @@ app.get('/api/health', (req, res) => {
   }, 100)
 })
 
-app.listen(port, () => console.log(`API Gateway running on port ${config.port}!`));
+app.listen(port, () => console.log(`API Gateway ${config.port}!`));
