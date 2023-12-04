@@ -1,10 +1,8 @@
 name: Apigateway (CI)
 on:
   push:
-    branches:
-    - develop
-    paths:
-    - apigateway
+    branches: ['develop']
+    paths: ['apigateway/**']
 jobs:
   build:
 

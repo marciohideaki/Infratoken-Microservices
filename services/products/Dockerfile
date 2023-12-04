@@ -1,6 +1,8 @@
 # Use Node 16 alpine as parent image
 FROM node:16-alpine
 
+LABEL org.opencontainers.image.source=https://github.com/marciohideaki/Infratoken-Microservices
+
 # Change the working directory on the Docker image to /app
 WORKDIR /app
 
