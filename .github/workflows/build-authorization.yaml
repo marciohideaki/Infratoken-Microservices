@@ -1,22 +1,22 @@
 name: Authorization (CI)
 on:
   push:
-    branches:
-    - develop
-    paths:
-    - apigateway
+    branches: ['develop']
+    paths: ['services/authorization/**']
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
+    env:
+      working-directory: ./services/authorization
+    defaults:
+      run:
+        working-directory: ${{ env.working-directory }}
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20.x'
-      - name: Install dependencies
-        run: npm install
+      - run: npm install
       - run: npm ci
       - run: npm run build --if-present

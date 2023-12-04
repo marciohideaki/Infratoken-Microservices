@@ -64,5 +64,5 @@ createTerminus(server, {
  })
 
 app.listen(config.port, function () {
-    console.log('Server has started at port %s', config.port);
+    console.log('Server is running on port %s', config.port);
 });
